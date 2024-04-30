@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Empty Box</title>
+    <style>
+           body {
+               font-family: Arial, sans-serif;
+               background-color: white;
+             }
+          .center-box {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 900px; 
+               height: 530px; 
+               background-color: #07a5c3;
+               border: 2px solid #333;
+               border-radius: 10px;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+               padding: 20px;
+               box-sizing: border-box;
+             }
+
+         .center-wrapper {
+               display: flex;
+               align-items: center;
+               height: 100vh;
+             }
+
+  
+         @media (max-width: 768px) {
+             .center-box {
+             width: 110%; 
+             height: 100%; 
+            padding: 10px;
+            }
+
+       .container,
+      .container_2 {
+             width: 100%; 
+             margin: 10px auto; 
+            float: none; 
+            }
+          }
+
+      .container,
+      .container_2 {
+          background-color: white;
+          width: 30%;                          
+         float: left;                                                     
+         margin-right: 2%;
+         border: 2px solid black;
+         padding: 20px;
+         box-sizing: border-box;
+         border-radius: 10px;
+         height: 355px;
+         border-color: black;
+         margin-bottom: 50%;
+         margin-left: 5%;
+      }
+
+     h3 {
+        text-align: center;
+      }
+  
+   .button {
+       display: inline-block;
+       padding: 10px 20px;
+       border: 2px solid #07a5c3;
+       border-radius: 5px;
+       background-color: #07a5c3;
+       color: white;
+       text-decoration: none;
+       transition: transform 0.5s; 
+     }
+    .button:hover {
+         background-color: #07a5c3;
+     }
+   
+  
+    #centered-p {
+        text-align: center;
+        color: #e1ad01;
+        font-size: 30px;
+     }
+  
+     #pay {
+         text-align: center; 
+       }
+
+     #pay ul {
+        list-style: none;
+      }
+    #pay li::before {
+        content: '\2714';
+        color:  #07a5c3;
+        display: inline-block;
+        width: 1em;
+       margin-left: -1em;
+      }
+     #checkbox {
+      position: absolute;
+      bottom: 50%; 
+     right: 20px; 
+     }
+
+   .switch {
+       position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      margin-right: 50px;
+    }
+
+   .switch input {
+        opacity: 0;
+        width: 0;
+       height: 0;
+     }
+
+    .slider {
+         position: absolute;
+         cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:white;
+        transition: .4s;
+        border-radius: 34px;
+      }
+
+    .slider:before {
+       position: absolute;
+       content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #07a5c3;
+      transition: .4s;
+      border-radius: 50%;
+     }
+
+     input:checked + .slider {
+         background-color: white;
+       }
+
+     input:checked + .slider:before {
+           transform: translateX(26px);
+            background-color:  #07a5c3;
+         }
+
+      .slider.round {
+         border-radius: 34px;
+         }
+
+      .slider.round:before {
+            border-radius: 50%;
+           }
+
+      span {
+          color: white;
+      }
+     /* Media query for mobile devices */
+     @media screen and (max-width: 768px) {
+             .switch {
+                 position: absolute; 
+                 top: 250px; 
+                right: 300px;
+              }
+           }
+
+    .checkbox {
+        position: absolute;
+        bottom: 30%;
+        right: 20px;
+       width: 170px; 
+      border: 3px solid black; 
+      }
+
+    .dropdown {
+         width: 100%;
+        padding: 8px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 15px; 
+         border-radius: 0; 
+     }
+    .para {
+       position: absolute;
+       bottom: 12%;
+       left: 75%;
+      text-align: right;
+     }
+
+     .no {
+        margin-left: 5px; 
+       }
+    @media (max-width: 768px) {
+         .para {
+              position: absolute;
+              bottom: 20px; 
+              left: 38%; 
+              transform: translateX(-50%); 
+              text-align: center; 
+           }
+
+       .no {
+           margin-left: 5px; 
+       }
+    }
+
+     h1 {
+         text-align: center;
+      }
+
+    @media (max-width: 768px) {
+        .checkbox {
+            font-size: 14px;
+            position: absolute; 
+            bottom: 80px; 
+            left: 20%;
+            border: 1px solid black; 
+          }
+       }
+    </style>
+</head>
+<body>
+  <div class="center-box">
+    <h1>Want to <span>Advertise</span> your Event<br> on Konnect?</h1>
+    <div class="center-wrapper">
+      <div class="container">
+        <h1 id="centered-p" class="basicPrice">$15.99</h1>
+       
+        <h3>Basic</h3>
+       <div id="pay">
+          <ul>
+            <li>&nbspEvent added to group for members to find.​</li>
+            <br>
+          </ul>
+          <br>
+          <br>
+          <a href="card.html" class="button" id="basicStartButton">Start</a>
+        </div>
+      </div>
+      <div class="container_2">
+        <h1 id="centered-p" class="proPrice">$25.99</h1>
+        <h3>Pro</h3>
+       <div id="pay">
+          <ul>
+            <li>&nbspEvent featured on newsletter and home page.</li><br>
+          </ul>
+          <br>
+          <a href="card.html" id="proStartButton" class="button">Start</a>
+        </div>
+        <br>
+        <div id="checkbox">
+            <label class="switch">
+              <input type="checkbox" id="toggleCheckbox">
+              <span class="slider round"></span>
+            </label>
+            <br><br>
+            <span id="toggleText" data-left="Monthly" data-right="Yearly">Monthly / Annually</span>
+       </div>
+      <div class="checkbox">
+          <select id="choose" class="dropdown">
+            <option value="webdev">Web Development</option>
+            <option value="cloud">Cloud computing</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="ml">Machine Learning</option>
+          </select>
+        </div>
+        <p class="para">Number of members: <span class="no">2034</span></p>
+    </div>
+    </div>
+  </div>
+  <script>
+   const toggleCheckbox = document.getElementById('toggleCheckbox');
+toggleCheckbox.addEventListener('change', function() {
+  const basicPrice = document.querySelector('.basicPrice');
+  const proPrice = document.querySelector('.proPrice');
+  if (toggleCheckbox.checked) {
+    basicPrice.textContent = '$190.99';
+    proPrice.textContent = '$310.99';
+  } else {
+    basicPrice.textContent = '$15.99';
+    proPrice.textContent = '$25.99';
+  }
+});
+
+// Move event listeners for payment buttons outside the change event listener
+document.getElementById("basicStartButton").addEventListener("click", function() {
+  alert("Make the Basic payment!");
+});
+
+document.getElementById("proStartButton").addEventListener("click", function() {
+  alert("Make the Pro payment!");
+});
+
+    </script>
+</body>
+</html>

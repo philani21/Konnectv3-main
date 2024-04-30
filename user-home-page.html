@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylesheet.css" rel="stylesheet">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>Welcome </h1>
+    <p>Checkout these Tech events</p>
+    <div class="row">
+    
+            <div class="column left">
+                <a href="advertiser-payment-options.html" class="register">register &raquo;</a>
+            </div>
+        <!-- Slideshow container -->
+        <div class="column">
+            <div class="slideshow-container" width="100%">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 12</div>
+                    <img src="Corporate Presentation (1).png" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 12</div>
+                    <img src="Corporate Presentation (2).png" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 12</div>
+                    <img src="Corporate Presentation.png" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 12</div>
+                    <img src="a.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 12</div>
+                    <img src="f.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 12</div>
+                    <img src="b.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">7 / 12</div>
+                    <img src="c.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">8 / 12</div>
+                    <img src="d.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">9 / 12</div>
+                    <img src="e.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">10 / 12</div>
+                    <img src="j.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">11 / 12</div>
+                    <img src="k.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">12 / 12</div>
+                    <img src="m.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <br>
+
+   
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
